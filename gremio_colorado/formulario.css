@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Reseta margens e preenchimentos de todos os elementos */
+* {
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    box-sizing: border-box; /* Define o modelo de caixa para incluir bordas e preenchimentos na largura total */
+}
+
+html {
+    scroll-behavior: smooth; /* rolamento suave na tela para os links de âncora */
+}
+
+/* Estilo do corpo da pagina */
+body {
+    font-family: 'Roboto'; /* Define a fonte principal como Roboto */
+    background-image: url(/images/whiteblur.jpeg); /* Imagem de fundo */
+    background-repeat: no-repeat; /* Não repete a imagem de fundo */
+    background-size: cover; /* Cobre toda a área do fundo */
+}
+
+/* Container do header */
+.header-container {
+    display: flex; /* Utiliza flexbox para a estilização do layout */
+    justify-content: center; /* Centraliza horizontalmente */
+    background-color: #e5322a; /* definindo background */
+    padding: 5px; /* Espaçamento interno */
+}
+
+/* Estilo do cabeçalho */
+header {
+    display: flex; /* Utiliza flexbox para layout */
+    justify-content: space-between; /* Distribui espaço entre os elementos */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    gap: 10px; /* Espaço entre os itens */
+    font-family: 'Roboto'; /* Aplica a fonte Roboto */
+    color: white; /* Cor do texto */
+}
+
+/* Estilo do texto do logo */
+.logo-texto {
+    font-size: 25px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    text-shadow: 0 2px 2px rgb(0, 0, 0, .2); /* Sombra do texto para destaque */
+}
+
+/* Estilo da imagem do logo */
+.logo img {
+    width: 80px; /* Largura da imagem do logo */
+    border-radius: 100px; /* Bordas arredondadas para uma forma circular */
+    justify-content: center; /* Centraliza a imagem */
+}
+
+/* Estilo da lista de navegação */
+nav ul {
+    list-style-type: none; /* Remove marcadores da lista */
+    display: flex; /* Utiliza flexbox para layout */
+    gap: 50px; /* Espaço entre os itens da lista */
+    margin-left: 150px; /* Margem esquerda */
+}
+
+/* Estilo dos links da navegação */
+nav ul li a {
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 18px; /* Tamanho da fonte */
+    transition: .2s; /* Transição suave para efeitos */
+    padding: 10px; /* Espaçamento interno */
+}
+
+/* Efeito hover para os links da navegação */
+nav ul li a:hover {
+    text-decoration: underline; /* Sublinha o texto ao passar o mouse */
+    background-color: #c22a228a; /* Cor de fundo ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas ao passar o mouse */
+}
+
+/* Estilo do título h1 */
+h1 {
+    text-align: center; /* Centraliza o texto */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo do formulário de resposta */
+#responseForm {
+    background-image: url(/images/bg-login.avif); /* Imagem de fundo do formulário */
+    display: flex; /* Utiliza flexbox para layout */
+    flex-direction: column; /* Alinha os elementos em coluna */
+    justify-items: center; /* Alinha os itens ao centro */
+    justify-content: center; /* Alinha verticalmente ao centro */
+    margin-left: 650px; /* Margem esquerda */
+    background-color: rgb(255, 255, 255); /* Cor de fundo branca */
+    color: white; /* Cor do texto */
+}
+
+/* Estilo do formulário */
+form {
+    background-color: #f9f9f9; /* Cor de fundo do formulário */
+    border-radius: 5px; /* Bordas arredondadas */
+    max-width: 600px; /* Largura máxima do formulário */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8); /* Sombra ao redor do formulário */
+}
+
+/* Estilo dos rótulos (labels) */
+label {
+    display: block; /* Cada rótulo ocupa uma linha */
+    margin-bottom: 5px; /* Margem inferior */
+    padding: 5px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Estilo de entradas e áreas de texto */
+input, textarea {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Margem inferior */
+    border: 1px solid #ddd; /* Borda suave */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+/* Estilo do botão */
+button {
+    margin-left: 190px; /* Margem esquerda */
+    border: 2px solid #e5322a; /* Borda do botão */
+    color: black; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-decoration: none; /* Remove o sublinhado */
+    text-align: center; /* Alinha o texto ao centro */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 15px; /* Espaçamento interno */
+    width: 180px; /* Largura do botão */
+    display: flex; /* Utiliza flexbox para layout */
+    transition: .5s; /* Transição suave para efeitos */
+    box-shadow: 0  20px 20px rgba(255, 255, 255, 0.1); /* Sombra do botão */
+}
+
+/* Efeito hover para o botão */
+button:hover {
+    background-color: #e5322a; /* Cor de fundo ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilo da seção de resultado */
+#result {
+    margin-top: 20px; /* Margem superior */
+    padding: 15px; /* Espaçamento interno */
+    background-color: #f0f0f0; /* Cor de fundo */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 1px solid #ddd; /* Borda suave */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Estilo do rodapé */
+.rodape {
+    background-image: url(/images/bg-login.avif); /* Imagem de fundo do rodapé */
+    color: white; /* Cor do texto */
+    height: auto; /* Altura definida em automatico */
+    width: 100%; /* Largura total */
+    font-size: 14px; /* Tamanho da fonte */
+    font-family: 'Roboto'; /* Aplica a fonte Roboto */
+    margin-top: 100px; /* margem de cima */
+}
+
+/* Estilo dos links no rodapé */
+.rodape a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: white; /* Cor do texto dos links */
+}
+
+/* Estilo dos parágrafos no rodapé */
+.rodape p {
+    margin-bottom: 5px; /* Margem inferior */
+}
+
+/* Estilo da divisão do rodapé */
+.rodape-div {
+    display: flex; /* Utiliza flexbox para layout */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    width: 100%; /* Largura total */
+    margin: auto; /* Centraliza */
+    align-items: stretch; /* Estica os itens */
+    padding: 60px 10px 40px 10px; /* Espaçamento interno */
+}
+
+/* Estilo das divisões do rodapé */
+.rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4 {
+    display: flex; /* Utiliza flexbox para layout */
+    width: calc(100% / 4 - 20px); /* Largura de cada divisão, com margem */
+    padding: 10px; /* Espaçamento interno */
+}
+
+/* Estilo da primeira divisão do rodapé */
+.rodape-div-1 {
+    margin-left: 50px; /* Margem esquerda */
+}
+
+/* Estilo do texto no rodapé */
+.rodape span {
+    font-size: 20px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+}
+
+/* Estilo da seção de direitos do rodapé */
+.rodape-direitos {
+    width: 2000px; /* Largura total */
+    background-color: black; /* Cor de fundo */
+    padding: 10px; /* Espaçamento interno */
+    margin: 0px; /* Margem zero */
+    text-align: center; /* Centraliza o texto */
+}

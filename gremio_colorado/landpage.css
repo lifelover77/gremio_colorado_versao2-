@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Resetando margens e preenchimentos de todos os elementos, e definindo box-sizing para border-box */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Rolagem de tela suave, usando a estrutura de links por âncora */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilo base do corpo da página */
+body {
+    font-family: 'Roboto'; /* Define a fonte padrão ( roboto ) */
+}
+
+/* Estilo do container do header */
+.header-container {
+    display: flex; /* usando flexbox para a montagem do layout */
+    justify-content: center; /* Centraliza na horizontal */
+    background-color: #e5322a; /* Cor de fundo do header */
+    padding: 5px; /* Espaçamento interno de 5px */
+}
+
+/* estilização do cabeçalho */
+header {
+    display: flex; /* usando flexbox */
+    justify-content: space-between; /* Espaço entre os elementos */
+    align-items: center; /* alinha elementos verticalmente */
+    gap: 10px; /* Espaçamento entre os elementos */
+    font-family: 'Roboto'; /* Aplica a fonte 'Roboto' */
+    color: white; /* Cor do texto */
+}
+
+/* Estilo do texto do logo */
+.logo-texto {
+    font-size: 25px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); /* Sombra do texto */
+}
+
+/* Estilo da imagem do logo */
+.logo img {
+    width: 80px; /* Largura da imagem do logo */
+    border-radius: 100px; /* Bordas redondas de 100px */
+    justify-content: center; /* coloca a imagem no centro */
+}
+
+/* Estilo do menu de navegação */
+nav ul {
+    list-style-type: none; /* Remove as marcações da lista */
+    display: flex; /* Utiliza flexbox para layout */
+    gap: 50px; /* Espaço entre os itens do menu */
+    margin-left: 150px; /* definindo margem esquerda */
+}
+
+/* Estilo dos links do menu de navegação */
+nav ul li a {
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 18px; /* Tamanho da fonte */
+    transition: .2s; /* Transição suave ao passar o mouse(hover) */
+    padding: 10px; /* Espaçamento interno */
+}
+
+/* Estilo do link ao passar o mouse */
+nav ul li a:hover {
+    text-decoration: underline; /* Sublinha o texto */
+    background-color: #c22a228a; /* Cor de fundo ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Estilo principal do conteúdo da página */
+main {
+    text-align: center; /* Centraliza o texto */
+    padding: 50px; /* Espaçamento interno */
+    background-color: rgb(255, 255, 255); /* Cor de fundo */
+    display: flex; /* Utiliza flexbox para layout */
+    justify-content: baseline; /* Alinhamento do conteúdo */
+    margin-left: 400px; /* Margem esquerda */
+}
+
+/* Estilo da seção de boas-vindas */
+.welcome-section h1 {
+    font-size: 36px; /* Tamanho da fonte do título */
+    color: #333; /* Cor do texto */
+    margin-bottom: 10px; /* Margem inferior */
+    display: flex; /* Utiliza flexbox para layout */
+    justify-content: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilo da seção de boas-vindas */
+.welcome-section {
+    justify-content: left; /* Alinha a seção à esquerda */
+}
+
+/* Estilo do parágrafo da seção de boas-vindas */
+.welcome-section p {
+    font-size: 18px; /* Tamanho da fonte do parágrafo */
+    color: #666; /* Cor do texto */
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+/* Estilo do botão "faça parte" */
+.facaparte-button {
+    border: 2px solid #e5322a; /* Borda do botão */
+    color: black; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-decoration: none; /* Remove o sublinhado */
+    text-align: center; /* Alinha o texto ao centro */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    width: 180px; /* Largura do botão */
+    display: flex; /* Utiliza flexbox para layout */
+    transition: .5s; /* Transição suave */
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2); /* Sombra do botão */
+}
+
+/* Estilo do botão ao passar o mouse */
+.facaparte-button:hover {
+    color: white; /* Muda a cor do texto ao passar o mouse */
+    background-color: #e5322a; /* Cor de fundo ao passar o mouse */
+    -webkit-animation: swing 1s ease; /* Animação de balanço */
+    animation: anime-balanco 1s ease; /* Animação de balanço */
+    -webkit-animation-iteration-count: 1; /* Número de iterações da animação */
+    animation-iteration-count: 1; /* Número de iterações da animação */
+}
+
+/* Definição da animação de balanço */
+@keyframes anime-balanco {
+    15% {
+        transform: translateX(7px); /* Move para a direita */
+    }
+    30% {
+        transform: translateX(-7px); /* Move para a esquerda */
+    }
+    50% {
+        transform: translateX(3px); /* Move ligeiramente para a direita */
+    }
+    65% {
+        transform: translateX(-3px); /* Move ligeiramente para a esquerda */
+    }
+    80% {
+        transform: translateX(2px); /* Move ligeiramente para a direita */
+    }
+    100% {
+        transform: translateX(0); /* Retorna ao centro */
+    }
+}
+
+/* Estilo da seção de comentários */
+#coment {
+    font-family: 'Roboto'; /* Aplica a fonte 'Roboto' */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 30px; /* Margem superior */
+    font-size: 26px; /* Tamanho da fonte */
+}
+
+/* Estilo das imagens na seção de imagens */
+.image-section img {
+    width: 300px; /* Largura da imagem */
+    margin-left: 150px; /* Margem esquerda */
+    border-radius: 100px; /* Bordas arredondadas */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Sombra da imagem */
+}
+
+/* Estilo da seção de conteúdo */
+.content-section {
+    margin-top: 5px; /* Margem superior */
+}
+
+/* Estilo do título da seção de conteúdo */
+.content-section h2 {
+    font-size: 28px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo das cartas na seção de conteúdo */
+.cards {
+    display: flex; /* Utiliza flexbox para layout */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 100px; /* Espaço entre as cartas */
+    margin-top: 100px; /* Margem superior */
+}
+
+/* Estilo do título da seção de conteúdo */
+.content-section h2 {
+    text-align: center; /* Centraliza o texto */
+    font-size: 36px; /* Tamanho da fonte */
+}
+
+/* Estilo das imagens nas cartas */
+.card img {
+    width: 275px; /* Largura da imagem */
+    height: 275px; /* Altura da imagem */
+    object-fit: cover; /* Mantém a proporção da imagem */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Estilo da carta */
+.card {
+    display: flex; /* Utiliza flexbox para layout */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    padding: 150px; /* Espaçamento interno */
+    width: 150px; /* Largura da carta */
+    height: 100px; /* Altura da carta */
+    background-color: #d5d3ca; /* Cor de fundo da carta */
+    border-radius: 20px; /* Bordas arredondadas */
+}
+
+/* Estilo da seção de comentários */
+.comentarios {
+    justify-content: center; /* Centraliza horizontalmente */
+    display: flex; /* Utiliza flexbox para layout */
+    gap: 45px; /* Espaço entre os comentários */
+    margin-top: 75px;
+
+ /* Margem superior */
+}
+
+/* Estilo da caixa de comentários */
+.comentario-box {
+    width: 350px; /* Largura da caixa */
+    height: 250px; /* Altura da caixa */
+    padding: 50px; /* Espaçamento interno */
+    color: #fff; /* Cor do texto */
+    position: relative; /* Para posicionamento absoluto de elementos internos */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Sombra da caixa */
+}
+
+/* Estilos de cores para cada caixa de comentário */
+.amarelo {
+    background-color: #cfb645; /* Cor de fundo amarelo */
+    color: black; /* Texto em preto para contraste com o fundo amarelo */
+}
+
+.vermelho {
+    background-color: #e5322a; /* Cor de fundo vermelho */
+}
+
+/* Estilo da imagem circular */
+.circulo img {
+    justify-content: center; /* Centraliza a imagem */
+    width: 70px; /* Largura da imagem */
+    height: 70px; /* Altura da imagem */
+    border-radius: 100%; /* Bordas arredondadas (círculo) */
+    object-fit: cover; /* Mantém a proporção da imagem */
+    margin-left: 130px; /* Margem esquerda */
+    transition: .3s; /* Transição suave ao passar o mouse */
+}
+
+/* Estilo da imagem circular ao passar o mouse */
+.circulo img:hover {
+    transform: scale(1.200); /* Aumenta a imagem */
+    border-radius: 35px; /* Alteração do raio da borda ao passar o mouse */
+}
+
+/* Estilo de fundo preto */
+.preto {
+    background-color: #121211; /* Cor de fundo preta */
+}
+
+/* Estilo do círculo (círculo branco) */
+.circulo {
+    width: 50px; /* Largura do círculo */
+    height: 50px; /* Altura do círculo */
+    border-radius: 50%; /* Bordas arredondadas (círculo) */
+    position: absolute; /* Posiciona o círculo de forma absoluta */
+    top: -25px; /* Posiciona na parte superior do comentário */
+    left: 15px; /* Afastamento da borda esquerda */
+}
+
+/* Estilo do texto na seção de famosos */
+#famous_name p {
+    text-align: center; /* Centraliza o texto */
+    margin-top: 20px; /* Margem superior */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+/* Estilo do título principal */
+h1 {
+    text-align: center; /* Centraliza o texto */
+    margin-top: 20px; /* Margem superior */
+}
+
+/* Estilo do rodapé */
+.fundolegal {
+    display: grid; /* Utiliza grid para layout */
+    grid-template-areas:
+        "linha1 linha1 linha1"
+        "linha2 linha3 linha4"; /* Define as áreas do grid */
+    text-align: center; /* Centraliza o texto */
+    grid-auto-rows: 100px; /* Define a altura das linhas */
+    gap: 10px; /* Espaço entre as áreas do grid */
+    grid-template-columns: 5fr 20fr 3.5fr; /* Define as colunas do grid */
+    grid-template-rows: 50px 150px 50px; /* Define as linhas do grid */
+}
+
+/* Estilo da seção "sobre" */
+#sobre {
+    grid-area: linha1; /* Define a área do grid */
+    text-align: center; /* Centraliza o texto */
+    padding: 7 30px; /* Espaçamento interno */
+    padding-top: 50px; /* Margem superior */
+    font-size: 39px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+}
+
+/* Estilo da segunda linha do grid */
+.linha2 {
+    grid-area: linha2; /* Define a área do grid */
+    padding-right: 10px; /* Margem direita */
+    padding-top: 60px; /* Margem superior */
+    padding-left: 350px; /* Margem esquerda */
+}
+
+/* Estilo da terceira linha do grid */
+.linha3 {
+    font-family: 'Roboto'; /* Aplica a fonte 'Roboto' */
+    margin-top: 100px; /* Margem superior */
+    margin-right: 300px; /* Margem direita */
+    margin-left: -80px; /* Margem esquerda */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo da quarta linha do grid */
+.linha4 {
+    grid-area: linha4; /* Define a área do grid */
+}
+
+/* Estilo da seção "sobre nós" */
+#sobreNos {
+    background-color: rgb(219, 219, 219); /* Cor de fundo */
+    padding: 50px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 0 70px rgba(90, 90, 90, 0.4); /* Sombra da seção */
+    border: 2px solid rgb(170, 170, 170); /* Borda da seção */
+    background-repeat: no-repeat; /* Não repete o fundo */
+    background-size: cover; /* Cobre toda a área */
+}
+
+/* Estilo da galeria */
+.galeria-cont {
+    display: flex; /* Utiliza flexbox para layout */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 30px; /* Espaço entre as imagens */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #f9f9f9; /* Cor de fundo */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra da galeria */
+    margin-top: 50px; /* Margem superior */
+    box-shadow: 0 0 70px rgb(0, 0, 0, .3);
+}
+
+/* Estilo das imagens na galeria */
+.galeria-cont img {
+    width: 100%; /* Largura da imagem */
+    max-width: 550px; /* Largura máxima da imagem */
+    height: auto; /* Altura automática para manter a proporção */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Sombra da imagem */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Transição suave para efeitos */
+}
+
+/* Estilo da imagem da galeria ao passar o mouse */
+.galeria-cont img:hover {
+    transform: scale(1.10); /* Aumenta a imagem */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
+}
+
+/* Estilo do título da galeria */
+#titulo h1 {
+    margin-top: 50px; /* Margem superior */
+    font-size: 30px; /* Tamanho da fonte */
+}
+
+/* Estilo do título da seção de galeria */
+#galeria h1 {
+    margin-top: 100px; /* Margem superior */
+}
+
+/* Estilo para quebra de linha */
+.quebra-linha {
+    margin-top: 200px; /* Margem superior */
+}
+
+/* Estilo do calendário */
+.calendario {
+    margin-top: 20px; /* Margem superior */
+    border-radius: 5px; /* Bordas arredondadas */
+    display: flex; /* Utiliza flexbox para layout */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    justify-items: center; /* Alinha os itens no centro */
+    border: 1px solid #ccc; /* Borda do calendário */
+    object-fit: cover; /* Mantém a proporção da imagem */
+}
+
+/* Estilo do rodapé com grid */
+.posto {
+    display: grid; /* Utiliza grid para layout */
+    grid-template-areas:
+        "linha1 linha2 linha2"
+        "linha1 linha3 linha3"
+        "linha1 linha5 linha5"; /* Define as áreas do grid */
+    text-align: center; /* Centraliza o texto */
+    grid-auto-rows: 100px; /* Define a altura das linhas */
+    gap: 10px; /* Espaço entre as áreas do grid */
+    grid-template-columns: 3.5fr 4fr 1.5fr; /* Define as colunas do grid */
+    grid-template-rows: 50px 20px 50px; /* Define as linhas do grid */
+}
+
+/* Estilo do rodapé */
+.rodape {
+    background-image: url(/images/bg-login.avif); /* Imagem de fundo */
+    color: white; /* Cor do texto */
+    height: auto; /* Altura automática */
+    width: 100%; /* Largura total */
+    font-size: 14px; /* Tamanho da fonte */
+    font-family: 'Roboto'; /* Aplica a fonte 'Roboto' */
+}
+
+/* Estilo dos links no rodapé */
+.rodape a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: white; /* Cor do texto */
+}
+
+/* Estilo dos parágrafos no rodapé */
+.rodape p {
+
+
+    margin-bottom: 5px; /* Margem inferior */
+}
+
+/* Estilo da divisão do rodapé */
+.rodape-div {
+    display: flex; /* flexbox para layout */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    width: 100%; /* Largura total definida em 100% */
+    margin: auto; /* Centraliza */
+    align-items: stretch; /* Estica os itens */
+    padding: 60px 10px 40px 10px; /* Espaçamento interno */
+}
+
+/* Estilo das divisões do rodapé */
+.rodape-div-1,
+.rodape-div-2,
+.rodape-div-3,
+.rodape-div-4 {
+    display: flex; /* Utiliza flexbox para layout */
+    width: calc(100% / 4 - 20px); /* Largura de cada divisão */
+    padding: 10px; /* Espaçamento interno */
+}
+
+/* estilo da primeira divisão do rodapé */
+.rodape-div-1 {
+    margin-left: 50px; /* definindo margem esquerda */
+}
+
+/* Estilo do texto do rodapé */
+.rodape span {
+    font-size: 20px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+}
+
+/* Estilo da seção de direitos do rodapé */
+.rodape-direitos {
+    width: 2000px; /* Largura total */
+    background-color: black; /* Cor de fundo */
+    padding: 10px; /* Espaçamento interno */
+    margin: 0px; /* Margem zero */
+    text-align: center; /* Centraliza o texto */
+}
+
+.facaparte-button2 {
+    margin-left: 460px;
+    margin-top: 20px;
+    background-color: #e5322a;
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-decoration: none; /* Remove o sublinhado */
+    text-align: center; /* Alinha o texto ao centro */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    width: 180px; /* Largura do botão */
+    display: flex; /* Utiliza flexbox para layout */
+    transition: .5s; /* Transição suave */
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2); /* Sombra do botão */
+}
+
+/* Estilo do botão ao passar o mouse */
+.facaparte-button2:hover {
+    color: white; /* Muda a cor do texto ao passar o mouse */
+    background-color: #c92a21;
+}
+
+.facaparte-button3 {
+    margin-left: 860px;
+    margin-top: -60px;
+    background-color: #e5322a;
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-decoration: none; /* Remove o sublinhado */
+    text-align: center; /* Alinha o texto ao centro */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    width: 180px; /* Largura do botão */
+    display: flex; /* Utiliza flexbox para layout */
+    transition: .5s; /* Transição suave */
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2); /* Sombra do botão */
+}
+
+/* Estilo do botão ao passar o mouse */
+.facaparte-button3:hover {
+    color: white; /* Muda a cor do texto ao passar o mouse */
+    background-color: #c92a21;
+}
+
+.facaparte-button4 {
+    margin-left: 1260px;
+    margin-top: -60px;
+    background-color: #e5322a;
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-decoration: none; /* Remove o sublinhado */
+    text-align: center; /* Alinha o texto ao centro */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    width: 180px; /* Largura do botão */
+    display: flex; /* Utiliza flexbox para layout */
+    transition: .5s; /* Transição suave */
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2); /* Sombra do botão */
+}
+
+/* Estilo do botão ao passar o mouse */
+.facaparte-button4:hover {
+    color: white; /* Muda a cor do texto ao passar o mouse */
+    background-color: #c92a21;
+}
